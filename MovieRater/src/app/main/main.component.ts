@@ -12,6 +12,7 @@ import { ApiService} from 'src/app/api.service'
 export class MainComponent implements OnInit {
 
   movies:any =[];
+  selectedMovie=null;
 
   constructor(private apiService:ApiService) { }
 
@@ -24,6 +25,11 @@ export class MainComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  selectMovie(movie){
+    this.selectedMovie=movie;
+    console.log('selectedMovie',this.selectedMovie)
   }
 
 }
