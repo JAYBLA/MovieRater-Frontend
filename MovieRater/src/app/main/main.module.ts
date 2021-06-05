@@ -7,6 +7,9 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieFormComponent } from './movie-form/movie-form.component';
 
+// Api Service
+import { ApiService} from 'src/app/api.service'
+
 const routes: Routes=[
   {path: 'movies', component:MainComponent}
 ];
@@ -21,6 +24,9 @@ const routes: Routes=[
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    ApiService
   ]
 })
 export class MainModule { }
